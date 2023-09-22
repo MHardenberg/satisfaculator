@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-import "github.com/MHardenberg/satisfaculator/product"
+import "satisfaculator/product"
 
 
 func main()  {
