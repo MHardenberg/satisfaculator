@@ -2,6 +2,7 @@ package main
 
 import (
     "fmt"
+    "satisfaculator/internal/recipes"
 )
 
 
@@ -11,16 +12,13 @@ import (
 func main()  {
     fmt.Println("test");
 
-    var prod Product;
-    prod.name = "screws";
-    prod.id = "p01";
+    var prod = recipes.Product{"p01", "screws"};
+    
 
-    fmt.Println(prod.repr())
+    fmt.Println(prod.Repr())
 
-    var rec Recipe;
-    rec.id = "p01";
-    rec.name = "hallo";
-    rec.output = prod;
 
-    fmt.Println(rec.repr())
+    var rec = recipes.Recipe{"r01", "screws recipe", prod, 10}
+
+    fmt.Println(rec.Repr())
 }
