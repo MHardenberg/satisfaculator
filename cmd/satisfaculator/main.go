@@ -2,23 +2,16 @@ package main
 
 import (
     "fmt"
-    "github.com/MHardenberg/satisfaculator/internal/recipes"
+    "satisfaculator/internal/recipes"
 )
 
 
 func main()  {
     fmt.Println("test");
 
-    var prod recipes.Product;
-    prod.name = "screws";
-    prod.id = "p01";
+    var prod = recipes.Product{"p01", "screws"};
+    fmt.Println(prod.Repr())
 
-    fmt.Println(prod.repr())
-
-    var rec recipes.Recipe;
-    rec.id = "p01";
-    rec.name = "hallo";
-    rec.output = prod;
-
-    fmt.Println(rec.repr())
+    var rec = recipes.Recipe{"r01", "screws recipe", prod, 10}
+    fmt.Println(rec.Repr())
 }
