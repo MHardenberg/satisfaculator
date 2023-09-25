@@ -1,4 +1,4 @@
-package recipes
+packagerecipes
 
 import (
     "fmt"
