@@ -7,6 +7,7 @@ import (
 type Product struct {
     name string
     id string
+    recipes []Recipe
 }
 
 
